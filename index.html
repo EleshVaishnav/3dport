@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elesh Vaishnav - Tech Enthusiast</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Courier New', monospace;
+      background: #0a0a0a;
+      color: #00ff00;
+      overflow: hidden;
+    }
+    
+    #canvas {
+      display: block;
+      width: 100%;
+      height: 100vh;
+    }
+    
+    #ui {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    
+    .header {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      z-index: 10;
+      pointer-events: auto;
+    }
+    
+    .title {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px #00ff00;
+    }
+    
+    .subtitle {
+      font-size: 14px;
+      color: #00cc00;
+    }
+    
+    .info {
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+      z-index: 10;
+      max-width: 400px;
+      pointer-events: auto;
+    }
+    
+    .project {
+      margin-bottom: 20px;
+      padding: 10px;
+      border-left: 2px solid #00ff00;
+      border-radius: 2px;
+    }
+    
+    .project-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .project-desc {
+      font-size: 12px;
+      color: #00aa00;
+      line-height: 1.4;
+    }
+    
+    .controls {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      z-index: 10;
+      pointer-events: auto;
+    }
+    
+    .control-text {
+      font-size: 12px;
+      margin-bottom: 8px;
+      color: #00cc00;
+    }
+    
+    button {
+      background: transparent;
+      border: 1px solid #00ff00;
+      color: #00ff00;
+      padding: 8px 16px;
+      margin: 5px 0;
+      cursor: pointer;
+      font-family: 'Courier New', monospace;
+      transition: all 0.3s;
+    }
+    
+    button:hover {
+      background: #00ff00;
+      color: #0a0a0a;
+      text-shadow: none;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  
+  <div id="ui">
+    <div class="header">
+      <div class="title">> Elesh Vaishnav</div>
+      <div class="subtitle">Tech Enthusiast | AI Builder</div>
+    </div>
+    
+    <div class="info">
+      <div class="project">
+        <div class="project-title">> DeepClaw</div>
+        <div class="project-desc">Agentic AI system for intelligent automation</div>
+      </div>
+      <div class="project">
+        <div class="project-title">> Parmana</div>
+        <div class="project-desc">Local AI assistant • Ollama • Telegram • Memory</div>
+      </div>
+    </div>
+    
+    <div class="controls">
+      <div class="control-text">// ROTATE: DRAG | ZOOM: SCROLL</div>
+      <button onclick="rotateObject()">Rotate</button>
+      <button onclick="zoomIn()">Zoom In</button>
+      <button onclick="zoomOut()">Zoom Out</button>
+    </div>
+  </div>
+</body>
+</html>
